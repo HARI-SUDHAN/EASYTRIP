@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width", initaial-scale="1.0">
+    <title>EasyTrip.com</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- header section starts -->
+
+<header>
+
+    <a href="#" class="logo"><span><i class="fa-solid fa-plane"></i></span> Easy<span>Trip</span></a>
+
+    <div class="bar">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#packages">Packages</a>
+        <a href="#honeymoon">Honeymoon</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+   <a href="booking.html" class="proceed-btn">Book Now</a>
+
+   <!-- login link shown when no user; replaced by username when logged in -->
+  <a id="loginLink" href="login.html" class="proceed-btn">Login</a>
+
+  <!-- username button (hidden by default). Clicking it goes to profile page -->
+  <a id="userBtn" href="profile.html" class="proceed-btn" style="display:none;"></a>
+   
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts -->
+
+<section class="home" id="home">
+
+    <div class="container">
+        <div class="search-box">
+            <form>
+                <input type="text" id="from" placeholder="From"/>
+                <button type="button" onclick="swapValues()">⇄</button>
+                <input type="text" id="to" placeholder="To"/>
+                <button onclick="searchDestination()" class="btn-1">Search</a>
+            </form>
+        </div>  
+    </div> 
+
+</section>
+
+<!-- home section ends -->
+ 
+<!-- about section starts -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> About<span> Us</span></h1>
+
+    <div class="row">
+
+        <div class="video-container">
+            <video src="./pictures/about5.mp4" loop autoplay muted></video>
+            <h3>Explore The World</h3>
+        </div>
+
+        <div class="content">
+            <h3>Why Choose Us</h3>
+            <p>EasyTrip is a full integrated travel company that offers comprehensive solutions for all the business and leisure travelers across the world. This prestigious travel company in India mainly aims to satisfy the client’s requirements with ultimate transparency and cost-effectiveness. We assure to offer round the clock support and assistance at any point of your travel.</p>
+            <p>Our EasyTrip Team is striving hard to become the world class travel company and industry leader in the near future. We are planning to focus on customer centric approach and gain recognition among the worldwide clients. The travel company believes in maintaining highest quality standards and craft extraordinary moments especially for you.</p>
+            <a href="readmore.html" class="btn">Read more</a>
+        </div>
+        
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- icons section starts -->
+
+<section class="icons-container">
+    
+    <div class="icons">
+        <img src="./pictures/location.svg" height="100" width="100"> 
+        <div class="info">
+            <h3>Handcrafted Experiences</h3>
+            <span>Each and every itinerary is customized according to the taste of the customers.</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="./pictures/world.svg" height="100" width="100">
+        <div class="info">
+            <h3>50,000+ Abroad Trips</h3>
+            <span>For the last decade, EasyTrip have organized more than 50,000 international itineraries.</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="./pictures/customer.svg" height="100" width="100">
+        <div class="info">
+            <h3>Extremely Happy Travellers</h3>
+            <span>EasyTrip holds record of great customer satisfaction and all customers are retained with us.</span>
+        </div>
+    </div>
+
+</section>
+
+<!-- icons section ends -->
+
+<!-- package section starts -->
+
+<section class="packages" id="packages">
+    <h1 class="heading"> Our<span> Packages</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="content">
+                <h3>Local Tour Packages</h3>
+            </div>
+            <div class="image">
+                <a href="local.html">
+                <img src="./pictures/local.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        
+        <div class="box">
+             <div class="content">
+                <h3>India Tour Packages</h3>
+            </div>
+            <div class="image">
+                <a href="india.html">
+                <img src="./pictures/india1.jpg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="box">
+             <div class="content">
+                <h3>International Tour Packages</h3>
+            </div>
+            <div class="image">
+                <a href="international.html">
+                <img src="./pictures/h4.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--package section ends -->
+
+<!--honeymoon section starts-->
+
+<section class="honeymoon" id="honeymoon">
+    <h1 class="heading"> Honey<span>moon</span> </h1>
+
+    <div class="box-splitter">
+
+        <div class="box">
+            <img src="./pictures/ooty.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Ooty </h3>
+                <p>Ooty (short for Udhagamandalam) is a resort town in the Western Ghats mountains, in southern India's Tamil Nadu state. Founded as a British Raj summer resort, it retains a working steam railway line.</p>
+                <div class="price"> ₹10,000 <span>₹18,000</span> </div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="./pictures/kodai.cms" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Kodaikanal </h3>
+                <p>Kodaikanal is a hill town in the southern Indian state of Tamil Nadu. It’s set in an area of granite cliffs, forested valleys, lakes, the town centers around man-made, star-shaped Kodaikanal Lake, bordered by evergreen forest.</p>
+                <div class="price"> ₹13,000 <span>₹22,000</span> </div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="./pictures/goa.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Goa </h3>
+                <p>Goa is a state in western India with coastlines stretching along the Arabian Sea. Its long history as a Portuguese colony prior to 1961 is evident in its preserved 17th-century churches and the area’s tropical spice plantations.</p>
+                <div class="price"> ₹35,000 <span>₹50,000</span> </div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="./pictures/munnar.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Munnar </h3>
+                <p>Munnar is a town in the Western Ghats mountain range in India’s Kerala state. A hill station and former resort for the British Raj elite, it's surrounded by rolling hills dotted with tea plantations. </p>
+                <div class="price"> ₹38,000 <span>₹50,000</span> </div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="./pictures/darjeeling.avif" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Darjeeling </h3>
+                <p>Darjeeling is a town in India's West Bengal state, in the Himalayan foothills. Once a summer resort for the British Raj elite, it remains the terminus of the narrow-gauge Darjeeling Himalayan Railway completed in 1881. </p>
+                <div class="price"> ₹46,000 <span>₹60,000</span> </div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="./pictures/maldives.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Maldives </h3>
+                <p>The Maldives, officially the Republic of Maldives, is an archipelagic country in South Asia located in the Indian Ocean. The Maldives is southwest of Sri Lanka and India, about 750 kilometres from the Asian continent's mainland. </p>
+                <div class="price"> ₹50,000 <span>₹80,000</span> </div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="./pictures/dubai.avif" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Dubai </h3>
+                <p>Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. </p>
+                <div class="price"> ₹65,000 <span>₹90,000</span> </div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="./pictures/paris.avif" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Paris </h3>
+                <p>Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower </p>
+                <div class="price"> ₹85,000 <span>₹1,20,000</span> </div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="./pictures/switzerland.avif" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Switzerland </h3>
+                <p>Switzerland is a mountainous Central European country, home to numerous lakes, villages and the high peaks of the Alps. with landmarks like capital Bern’s Zytglogge clock tower and Lucerne’s wooden chapel bridge. </p>
+                <div class="price"> ₹1,00,000 <span>₹1,60,000</span> </div>
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+
+    </div>
+</section>    
+<!--honeymoon section ends-->
+
+<!-- contact us section starts-->
+
+<section class="contact" id="contact">
+    <h1 class="heading"> Contact<span> Us</span> </h1>
+
+    <div class="box-splitter">
+
+        <div class="box">
+            <div class="content">
+                <h3><i class="fa-solid fa-location-dot"></i> Chennai </h3>
+                <p> EasyTrip Private Limited<br>No.1, Gemini Parson Complex,<br>Nungambakkam, <br>Chennai - 600006</p>
+                <p><i class="fa-solid fa-phone"></i> +91 6385443419</p>
+                <p><i class="fa-solid fa-envelope"></i> easytripchennai@gmail.in</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <h3><i class="fa-solid fa-location-dot"></i> Bangalore </h3>
+                <p> EasyTrip Private Limited<br>Novel Tech Park,<br>MG Road,<br>Bangalore - 560042</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9500735186</p>
+                <p><i class="fa-solid fa-envelope"></i> easytripbangalore@gmail.in</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <h3><i class="fa-solid fa-location-dot"></i> Hydrabad </h3>
+                <p> EasyTrip Private Limited<br>108, Workafella,<br>Banjara Hills,<br>Hyderabad - 500082</p>
+                <p><i class="fa-solid fa-phone"></i> +91 6385895537</p>
+                <p><i class="fa-solid fa-envelope"></i> easytriphydrabad@gmail.in</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <h3> <i class="fa-solid fa-location-dot"></i> Delhi </h3>
+                <p> EasyTrip Private Limited<br>Q1, Shop Number 3,<br> Tagore Park, Model Town,<br> New Delhi - 110009</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9942924694</p>
+                <p><i class="fa-solid fa-envelope"></i> easytripdelhi@gmail.in</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <h3><i class="fa-solid fa-location-dot"></i> Kolkata </h3>
+                <p> EasyTrip Private Limited<br> Office No 1609, 14th Floor<br> West Bengal,<br> kolkata - 700013</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9940882200</p>
+                <p><i class="fa-solid fa-envelope"></i> easytripkolkata@gmail.in</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <h3><i class="fa-solid fa-location-dot"></i> Mumbai </h3>
+                <p> EasyTrip Private Limited<br>G9, Akanksha, Gokhale Road (N),<br>Dadar West,<br>Mumbai - 400058.</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9764390587</p>
+                <p><i class="fa-solid fa-envelope"></i> easytripmumbai@gmail.in</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact us section ends-->
+
+<!--footer section starts -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box1">
+            <h3>Quick links</h3><br>
+            <center><a href="#home"><i class="fas fa-home"></i> Home</a></center><br>
+            <center><a href="#about"><i class="fa-solid fa-building"></i> About Us</a></center><br>
+            <center><a href="#packages"><i class="fa-solid fa-suitcase-rolling"></i> Packages</a></center><br>
+            <center><a href="#honeymoon"><i class="fa-solid fa-heart"></i> Honeymoon</a></center><br>
+            <center><a href="#contact"><i class="fas fa-phone"></i> Contact us</a></center><br>
+        </div>
+
+        <div class="box2">
+            <center><h3>extra links</h3></center><br>
+            <center><a href="local.html"><i class="fa-solid fa-car"></i> Local Packages</a></center><br>
+            <center><a href="india.html"><i class="fa-solid fa-train-subway"></i> India Packages</a></center><br>
+            <center><a href="international.html"><i class="fa-solid fa-plane-departure"></i> International Packages</a></center><br>
+        </div>
+
+        <div class="box3">
+            <center><h3>Contact Info</h3></center><br>
+            <center><a href="#"><i class="fas fa-phone"></i> +91 6385443419</a></center><br>
+            <center><a href="#"><i class="fas fa-envelope"></i> easytrip@gmail.in</a></center><br>
+            <center><a href="#"><i class="fas fa-map-marker-alt"></i> India, Asia</a></center><br>
+        
+        </div>
+        
+    </div>
+
+    <center><img src="./pictures/payment1.png" height="200px" width="800px"></center>
+
+    <div class="credit">Copyright &copy;2025 | All rights reserved by <span><i class="fa-solid fa-plane"></i></span> <b> Easy<span>Trip</span> </b> </div>
+    <div class="credit1">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+    </div>
+
+    <style>
+
+        .fa-facebook
+        {
+            color: blue;
+        }
+
+         .fa-youtube
+        {
+            color: red;
+        }
+
+        .fa-linkedin
+        {
+            color: #463deb;
+        }
+
+        .fa-instagram
+        {
+            color: rgb(244, 27, 132);
+        }
+
+        .fa-twitter
+        {
+            color: black;
+        }
+
+    </style>
+
+</section>
+
+<!--footer section ends-->
+
+
+<!--custom js file link-->
+
+<script src="script.js"></script>
+
+</body>
+</html>

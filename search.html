@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    .search-box {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    input {
+      padding: 10px;
+      width: 200px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    section {
+      margin-top: 80px;
+      padding: 40px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-box">
+    <h2>Plan Your Trip</h2>
+    <input type="text" id="from" placeholder="From">
+    <input type="text" id="to" placeholder="To">
+    <br>
+    <button onclick="searchDestination()">Search</button>
+  </div>
+
+  <!-- Destination Sections -->
+  <section id="delhi">
+    <h2>Delhi</h2>
+    <p>Welcome to Delhi! Explore historical landmarks and cultural spots.</p>
+  </section>
+
+  <section id="mumbai">
+    <h2>Mumbai</h2>
+    <p>Welcome to Mumbai! The city that never sleeps awaits you.</p>
+  </section>
+
+  <section id="chennai">
+    <h2>Chennai</h2>
+    <p>Welcome to Chennai! Beaches, temples, and rich tradition await.</p>
+  </section>
+
+  <script>
+    function searchDestination() {
+      const to = document.getElementById("to").value.toLowerCase().trim();
+
+      // Check if the section exists
+      const destination = document.getElementById(to);
+      if (destination) {
+        destination.scrollIntoView({ behavior: "smooth" });
+      } else {
+        alert("Destination not found. Please check the spelling or try another.");
+      }
+    }
+  </script>
+
+</body>
+</html>
